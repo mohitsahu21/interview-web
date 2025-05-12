@@ -6,14 +6,14 @@ const Cards = () => {
   return (
     <div className="flex justify-center flex-wrap items-center mt-4 pt-4">
       {topics.map((item) => (
-        <div className="mx-8 px-8 my-4 py-4">
+        <div className="mx-4 px-4 my-2 py-2 sm:mx-6 sm:px-6 md:mx-8 md:px-8">
           <Stack gap="4" direction="row" wrap="wrap">
             <Card.Root
               maxW="sm"
               overflow="hidden"
               className="transform transition duration-300 hover:scale-105"
             >
-              <div className="bg-black h-[275px] w-[275px]">
+              <div className="bg-black w-60 h-60 ">
                 <Image
                   src={item.img}
                   //   width={275}
