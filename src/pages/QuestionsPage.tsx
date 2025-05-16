@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Accordion, Span } from "@chakra-ui/react"
 type Question = {
   id: string;
