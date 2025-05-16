@@ -1,12 +1,16 @@
 import React from "react";
 import { Avatar, Button, Card, Image, Stack, Text } from "@chakra-ui/react";
 import { topics } from "../../Constants/topics.ts";
+import { useNavigate } from "react-router-dom";
 
 const Cards = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex justify-center flex-wrap items-center mt-4 pt-4">
       {topics.map((item) => (
-        <div className="mx-4 px-4 my-2 py-2 sm:mx-6 sm:px-6 md:mx-8 md:px-8">
+        <div
+        key={item.id}
+         className="mx-4 px-4 my-2 py-2 sm:mx-6 sm:px-6 md:mx-8 md:px-8">
           <Stack gap="4" direction="row" wrap="wrap">
             <Card.Root
               maxW="sm"
@@ -33,7 +37,9 @@ const Cards = () => {
         </Text> */}
               </Card.Body>
               <Card.Footer className="flex justify-center" gap="2">
-                <Button variant="solid">View now</Button>
+                <Button 
+                onClick={()=> navigate(item.path)}
+                variant="solid">View now</Button>
                 {/* <Button variant="ghost">Add to cart</Button> */}
               </Card.Footer>
             </Card.Root>
