@@ -19,7 +19,7 @@ const QuestionsPage = ({questions} : QuestionsPageProps) => {
   }
 }, [questions]); // include `questions` as a dependency
   return (
-   <div className={"mx-20 pt-16"}>
+   <div className={"mx-2 px-2 md:mx-20 pt-16"}>
      <Accordion.Root multiple defaultValue={["b"]}>
       {data?.map((item:Question) => (
         <Accordion.Item key={item.id} value={item.id} className='flex justify-center flex-col gap-1 mb-8'>
