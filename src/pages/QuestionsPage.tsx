@@ -14,7 +14,7 @@ const QuestionsPage = ({questions} : QuestionsPageProps) => {
     const [data, setData] = useState<Question[]>();
     
    useEffect(() => {
-  if (questions.length > 0) {
+  if (questions?.length > 0) {
     setData(questions);
   }
 }, [questions]); // include `questions` as a dependency
