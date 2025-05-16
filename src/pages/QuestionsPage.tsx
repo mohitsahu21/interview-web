@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import { Accordion, Span } from "@chakra-ui/react"
 type Question = {
   id: string;
   question: string;
@@ -19,14 +19,23 @@ const QuestionsPage = ({questions} : QuestionsPageProps) => {
   }
 }, [questions]); // include `questions` as a dependency
   return (
-   <div>
-    {data?.map((item)=>(
-        <div key={item.id}>
-            <h3>{item.question}</h3>
-            <p>{item.answer}</p>
-
-        </div>
-    ))}
+   <div className={"mx-20 pt-16"}>
+     <Accordion.Root multiple defaultValue={["b"]}>
+      {data?.map((item:Question) => (
+        <Accordion.Item key={item.id} value={item.id} className='flex justify-center flex-col gap-1 mb-8'>
+          <Accordion.ItemTrigger>
+          <span className="text-yellow-400">Ques:{item.id}</span>
+            <Span flex="1" className='font-bold text-xl'>{item.question}</Span>
+            <Accordion.ItemIndicator />
+          </Accordion.ItemTrigger>
+          <Accordion.ItemContent>
+              <span className="text-yellow-400">Answer:{"    "}</span>
+            <Accordion.ItemBody className='font-semibold text-lg pl-8'>
+             {item.answer}</Accordion.ItemBody>
+          </Accordion.ItemContent>
+        </Accordion.Item>
+      ))}
+    </Accordion.Root>
    </div>
   )
 }

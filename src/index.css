@@ -72,6 +72,6 @@ button:focus-visible {
 @tailwind utilities;
 
 body {
-  @apply bg-black text-white;
+  @apply bg-gray-700 text-white;
 }
 
