@@ -5,7 +5,21 @@ import {reactjs} from "../Constants/qustions/reactjs.ts"
 import {nodejs} from "../Constants/qustions/nodejs.ts"
 import {javascript} from "../Constants/qustions/javascript.ts"
 
-export const topics = [
+type Question = {
+  id: string;
+  question: string;
+  answer: string;
+};
+
+type Topic = {
+  id: number;
+  subject: string;
+  path: string;
+   img: string; // image imports are strings (URLs after bundling)
+  jsonPath: Question[]; // strictly an array, NOT a string
+};
+
+export const topics: Topic[] = [
     {id:1,
       subject: "Reactjs",
       img: reactImg,
@@ -23,17 +37,5 @@ export const topics = [
       img: javascriptImg,
       jsonPath: javascript,
        path:"/javascript-interview-questions/"
-    },
-    {id:4,
-      subject:"Javascript",
-      img: javascriptImg,
-      jsonPath:"/asset/files/Reactjs.json",
-       path:"/react-interview-questions/"
-    },
-    {id:4,
-      subject:"Javascript",
-      img: javascriptImg,
-      jsonPath:"/asset/files/Reactjs.json",
-       path:"/react-interview-questions/"
     }
   ]
