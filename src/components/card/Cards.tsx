@@ -1,5 +1,5 @@
-import { Button, Card, Image, Stack } from "@chakra-ui/react";
-import { topics } from "../../Constants/topics.ts";
+import { Button, Card,Stack } from "@chakra-ui/react";
+import { topics } from "../../Constants/topics.tsx";
 import { useNavigate } from "react-router-dom";
 
 const Cards = () => {
@@ -17,16 +17,20 @@ const Cards = () => {
               overflow="hidden"
               className="transform transition duration-300 hover:scale-105"
             >
-              <div className="bg-black w-60 h-60 ">
-                <Image
+              <div className="w-60 h-60 ">
+                {/* <Image
                   src={item.img}
                   //   width={275}
                   //   height={275}
                   alt={item.subject}
                   className="object-cover w-full h-full"
-                />
+                /> */}
+                {/* <FaReact className="w-full h-full p-2"/> */}
+                {item.img}
+
+
               </div>
-              <Card.Body gap="2">
+              <Card.Body gap="2" className="p-1 mb-1">
                 <Card.Title className="text-center">{item.subject}</Card.Title>
                 {/* <Card.Description>
           This sofa is perfect for modern tropical spaces, baroque inspired
