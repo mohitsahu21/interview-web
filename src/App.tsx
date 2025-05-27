@@ -1,6 +1,7 @@
 
 import './App.css'
 import AppRoutes from './routes/router'
+import 'animate.css';
 
 function App() {
 
