@@ -5,8 +5,8 @@ const Home = () => {
   return (
     <>
       <div className="flex justify-center items-center flex-col pt-5">
-        <div>
-          <h1 className="text-xl font-bold font-serif sm:text-3xl md:text-3xl lg:text-3xl text-center">Welcome to Interview Adda</h1>
+        <div className="">
+          <h1 className="text-xl font-bold font-serif sm:text-3xl md:text-3xl lg:text-3xl text-center animate__animated animate__backInLeft">Welcome to Interview Adda</h1>
         </div>
         <div className="mt-6">
           <TypeAnimation
@@ -30,7 +30,7 @@ const Home = () => {
           />
         </div>
       </div>
-      <div>
+      <div className="animate__animated animate__bounceInUp">
         <Cards />
       </div>
     </>
